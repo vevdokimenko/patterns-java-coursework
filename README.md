@@ -1,5 +1,8 @@
 # Fantasy battle game #
 
+### Demo: http://hxotkznrqy.eu11.qoddiapp.com/
+###
+
 #### При створенні проєкту були використані наступні паттерни: ####
 1. DI (Spring)
 2. Abstract Factory
