@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${myTeamRace}">Team</title>
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<div th:class="error"><span th:text="${error}"></span></div>
+<form method="post" action="battle">
+    <div class="container">
+        <div th:class="teams">
+            <div class="team-wrapper">
+                <div class="team-name" th:classappend="${myTeamRace.name().toLowerCase()}">
+                    <h3>My Team: <span th:text="${myTeamRace}"></span></h3>
+                </div>
+                <div th:each="item: ${myTeam}" th:class="${item.id == attacker} ? 'item attacker' : 'item'">
+                    <input type="radio" th:name="victim-my" th:value="${item.id}" th:class="victim-radio"
+                           th:id="${item.id}"/>
+                    <label th:class="item-name-wrapper" th:for="${item.id}">
+                    <span th:if="${item.id == attacker}">
+                        <input type="hidden" th:value="${item.id}" th:name="attacker"/>
+                    </span>
+                        <span th:text="${item.name}"></span>
+                        <div th:class="lives-wrapper">
+                            <div th:class="lives"></div>
+                            <div th:text="${item.lives}" th:class="lives-text"></div>
+                        </div>
+                    </label>
+                    <div th:class="item-info">
+                        <div th:class="action">
+                            <input type="radio" th:name="action" th:value="ATTACK"
+                                   th:class="${item.id == attacker} ? 'attacker-radio' : 'attacker-radio hidden'"
+                                   th:id="${item.id + item.attackCaption}"
+                                   th:checked="${item.id == attacker}"
+                            />
+                            <label th:for="${item.id + item.attackCaption}"
+                                   th:class="${item.id == attacker} ? 'attack-label' : 'attack-label disabled'">
+                                <div th:class="attack-img"></div>
+                                <div th:text="${item.attackCaption}"></div>
+                                (<span th:text="${item.getAttackDamage()}"></span>)
+                            </label>
+                        </div>
+                        <div th:class="action"
+                             th:if="${! (item instanceof T(org.robotdreams.patterns.coursework.characters.Warrior)) }">
+                            <input type="radio" th:name="action" th:value="SHOOT"
+                                   th:class="${item.id == attacker} ? 'attacker-radio' : 'attacker-radio hidden'"
+                                   th:id="${item.id + item.shootCaption}"/>
+                            <label th:for="${item.id + item.shootCaption}"
+                                   th:class="${item.id == attacker} ? 'attack-label' : 'attack-label disabled'">
+                                <div th:class="shoot-img"></div>
+                                <div th:text="${item.shootCaption}"></div>
+                                (<span th:text="${item.getShootDamage()}"></span>)
+                            </label>
+                        </div>
+                        <div th:class="misc">
+                            <div th:class="${item.isPrivilege()} ? 'privilege' : ''"></div>
+                            <div th:class="${item.isDamned()} ? 'damned' : ''"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--        ENEMY-->
+            <div class="team-wrapper">
+                <div th:class="team-name" th:classappend="${enemyTeamRace.name().toLowerCase()}">
+                    <h3>Enemy Team: <span th:text="${enemyTeamRace}"></span></h3>
+                </div>
+                <div th:each="item: ${enemyTeam}" th:class="item">
+                    <input type="radio" th:name="victim" th:value="${item.id}" th:class="victim-radio"
+                           th:id="${item.id}+'enemy'"/>
+                    <label th:class="item-name-wrapper" th:for="${item.id}+'enemy'">
+                        <span th:text="${item.name}"></span>
+                        <div th:class="lives-wrapper">
+                            <div th:class="lives"></div>
+                            <div th:text="${item.lives}" th:class="lives-text"></div>
+                        </div>
+                    </label>
+                    <div th:class="item-info">
+                        <div th:class="action">
+                            <div th:class="attack-img"></div>
+                            <div th:text="${item.attackCaption}"></div>
+                            (<span th:text="${item.getAttackDamage()}"></span>)
+                        </div>
+                        <div th:class="action"
+                             th:if="${! (item instanceof T(org.robotdreams.patterns.coursework.characters.Warrior)) }">
+                            <div th:class="shoot-img"></div>
+                            <div th:text="${item.shootCaption}"></div>
+                            (<span th:text="${item.getShootDamage()}"></span>)
+                        </div>
+                        <div th:class="misc">
+                            <div th:class="${item.isPrivilege()} ? 'privilege' : ''"></div>
+                            <div th:class="${item.isDamned()} ? 'damned' : ''"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div th:class="submit">
+            <input type="submit" value="Attack!" class="btn-attack"/>
+        </div>
+        <div th:class="info">
+            <p th:each="message: ${enemyTurn}">
+                <span th:text="${message}"></span>
+            </p>
+        </div>
+    </div>
+</form>
+</body>
+</html>

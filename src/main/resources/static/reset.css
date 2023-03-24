@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&family=Skranji:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+
+body,
+ul,
+ol,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+input,
+button,
+textarea {
+    border: none;
+    outline: none;
+    font: inherit;
+}
+
+button {
+    background: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-size: 1.5em;
+    line-height: 1.5em;
+}

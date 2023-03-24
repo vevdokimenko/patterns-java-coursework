@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Finish</title>
+    <link rel="stylesheet" th:href="@{/reset.css}">
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+<body>
+<div class="container">
+    <div class="welcome">
+        <h1><span th:text="${winner}"></span> winner!</h1>
+        <p>Want to play again?</p>
+        <a href="index.html">Play again</a>
+    </div>
+</div>
+</body>
+</html>

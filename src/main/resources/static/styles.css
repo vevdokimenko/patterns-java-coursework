@@ -1,0 +1,291 @@
+body {
+    background: url("./images/back2.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+li a {
+    display: block;
+}
+
+h1 {
+    font-family: 'Skranji', cursive;
+    background-image: radial-gradient(circle, #8b0000, #8b0000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    line-height: 1.5em;
+}
+
+.welcome {
+    width: 50vw;
+    filter: drop-shadow(0px 0px 3px #000);
+    background-color: #FFF;
+    height: min-content;
+    padding: 40px;
+    text-align: center;
+}
+
+.welcome ol {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.readme {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.readme p,
+.readme ul,
+.readme pre {
+    font-size: 16px;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+
+.readme pre {
+    font-size: 14px;
+}
+
+.teams {
+    display: flex;
+}
+
+.team-wrapper {
+    filter: drop-shadow(0px 0px 3px #000);
+    background-color: #FFF;
+    height: min-content;
+    margin: 0 20px;
+    min-width: 400px;
+}
+
+.item {
+    border-bottom: 1px solid #efefef;
+    padding: 5px 0;
+    margin: 0 28px 0 48px;
+    color: #4a4a4a;
+    position: relative;
+}
+
+.item-info {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.team-name {
+    font-size: 24px;
+    color: #FFF;
+    padding: 28px;
+    text-shadow: 0px 0px 10px #000000, 0px 0px 10px #000000;
+    background-position: center;
+    background-size: cover;
+}
+
+.human {
+    background-image: url("./images/human.jpg");
+}
+
+.elf {
+    background-image: url("./images/elf.jpg");
+    background-position-y: -85%;
+}
+
+.orc {
+    background-image: url("./images/orcs.jpg");
+    background-position-y: -125%;
+}
+
+.undead {
+    background-image: url("./images/undeads.jpg");
+    background-position-y: -110%;
+}
+
+.item-name-wrapper {
+    display: flex;
+    position: relative;
+    flex: 1;
+}
+
+.item-name-wrapper span {
+    font-weight: bold;
+}
+
+.attacker {
+    color: black;
+}
+
+.lives-wrapper {
+    margin-left: 10px;
+    display: flex;
+    font-size: 1em;
+    align-items: center;
+    position: relative;
+}
+
+.lives {
+    background-image: url("./images/lives.svg");
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+}
+
+.lives-text {
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.attack-img {
+    width: 16px;
+    height: 16px;
+    background-image: url("./images/attack.svg");
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.shoot-img {
+    width: 16px;
+    height: 16px;
+    background-image: url("./images/shoot.svg");
+    display: inline-block;
+    margin-right: 2px;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.submit {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.btn-attack{
+    margin: 10px auto;
+    width: 250px;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    font-family: 'Skranji', cursive;
+    color: #ffc000;
+    font-size: 24px;
+    font-weight: 400;
+    text-shadow: 0 1px 3px #000;
+    text-align: center;
+    padding: 10px 0;
+    background: radial-gradient(circle, #8b0000, #8b0000);
+    border-top: 4px ridge #ffb000;
+    border-left: 4px groove #ffb000;
+    border-right: 4px ridge #ffb000;
+    border-bottom: 4px groove #ffb000;
+    box-shadow: inset 0px 0px 5px 3px rgba(1,1,1,0.3);
+}
+
+.btn-attack:hover{
+    background: radial-gradient(circle, #e52b2b, #8b0000);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+
+.btn-attack:active{
+    background: radial-gradient(circle, #ec6a6a, #e52b2b);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+}
+
+.misc {
+    display: flex;
+    flex: 1;
+    justify-content: right;
+}
+
+.privilege {
+    background-image: url("./images/privilege.svg");
+    width: 20px;
+    height: 20px;
+}
+
+.damned {
+    background-image: url("./images/damned.svg");
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.victim-radio:checked + label,
+.victim-radio:checked + label + div {
+    color: black;
+}
+
+.victim-radio {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    position: absolute;
+    top: 12px;
+    left: -25px;
+}
+
+.victim-radio,
+.victim-radio + label,
+.victim-radio + label + div {
+    cursor: pointer;
+}
+
+.attacker-radio,
+.attack-label {
+    cursor: pointer;
+}
+
+.attack-label {
+    display: flex;
+    align-items: center;
+}
+
+.attacker-radio:checked + label {
+    box-shadow: inset 0 -3px 0 0 #000;
+}
+
+.hidden {
+    display: none;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.error {
+    background-color: #FFB4B4FF;
+    color: #5D0000FF;
+    font-size: 0.8em;
+    line-height: 1em;
+    text-align: center;
+}
+
+.info {
+    font-size: 16px;
+    line-height: 16px;
+    min-width: 840px;
+    margin: 0 auto;
+    margin-top: 1em;
+    filter: drop-shadow(0px 0px 3px #000);
+    background-color: #FFF;
+    padding: 20px;
+}
