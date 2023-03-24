@@ -14,14 +14,14 @@ public class ElfWizard extends Character implements Wizard {
         name = Names.ELF_WIZARD_NAME;
         shootCaption = Names.GOOD_WIZARD_SHOOT;
         attackCaption = Names.GOOD_WIZARD_ATTACK;
-        attackDamage = Constants.ELF_WIZARD_DAMAGE; // нанесение урона персонажу противника магией на 10 HP
+        attackDamage = Constants.ELF_WIZARD_DAMAGE;
     }
 
     @Override
     public void magic(Character character) throws GameException {
         validateCharacterIsMy(character);
         if (!character.isPrivilege()) {
-            character.setPrivilege(true); // наложение улучшения на персонажа своего отряда
+            character.setPrivilege(true);
         }
         setCaption(shootCaption);
     }

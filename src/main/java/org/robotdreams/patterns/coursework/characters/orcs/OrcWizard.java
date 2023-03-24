@@ -19,7 +19,7 @@ public class OrcWizard extends Character implements Wizard {
     public void magic(Character character) throws GameException {
         validateCharacterIsMy(character);
         if (!character.isPrivilege()) {
-            character.setPrivilege(true); // наложение улучшения на персонажа своего отряда.
+            character.setPrivilege(true);
         }
         setCaption(shootCaption);
     }
@@ -28,7 +28,7 @@ public class OrcWizard extends Character implements Wizard {
     public void attack(Character character) throws GameException {
         validateCharacterIsEnemy(character);
         if (character.isPrivilege()) {
-            character.setPrivilege(false); // наложение проклятия (снятие улучшения с персонажа противника для следующего хода)
+            character.setPrivilege(false);
         }
         setCaption(attackCaption);
     }

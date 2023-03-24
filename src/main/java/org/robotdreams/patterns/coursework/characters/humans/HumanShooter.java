@@ -16,8 +16,8 @@ public class HumanShooter extends Character implements Shooter {
         name = Names.HUMAN_SHOOTER_NAME;
         shootCaption = Names.GOOD_SHOOTER_SHOOT;
         attackCaption = Names.GOOD_SHOOTER_ATTACK;
-        shootDamage = Constants.HUMAN_SHOOTER_SHOOT; // стрелять из арбалета (нанесение урона 5 HP)
-        attackDamage = Constants.HUMAN_SHOOTER_DAMAGE; // атаковать (нанесение урона 3 HP)
+        shootDamage = Constants.HUMAN_SHOOTER_SHOOT;
+        attackDamage = Constants.HUMAN_SHOOTER_DAMAGE;
     }
 
     @Override

@@ -15,7 +15,7 @@ public class OrcWarrior extends Character implements Warrior {
     public OrcWarrior() {
         name = Names.ORC_WARRIOR_NAME;
         attackCaption = Names.ORC_WARRIOR_ATTACK;
-        attackDamage = Constants.ORC_WARRIOR_DAMAGE; // атака дубиной (нанесение урона 20 HP)
+        attackDamage = Constants.ORC_WARRIOR_DAMAGE;
     }
 
     @Override

@@ -16,8 +16,8 @@ public class UndeadShooter extends Character implements Shooter {
         name = Names.UNDEAD_SHOOTER_NAME;
         shootCaption = Names.UNDEAD_SHOOTER_SHOOT;
         attackCaption = Names.UNDEAD_SHOOTER_ATTACK;
-        shootDamage = Constants.UNDEAD_SHOOTER_SHOOT; // стрелять из лука (нанесение урона 4 HP)
-        attackDamage = Constants.UNDEAD_SHOOTER_DAMAGE; // атаковать (нанесение урона 2 HP)
+        shootDamage = Constants.UNDEAD_SHOOTER_SHOOT;
+        attackDamage = Constants.UNDEAD_SHOOTER_DAMAGE;
     }
 
     @Override

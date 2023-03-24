@@ -14,14 +14,14 @@ public class HumanWizard extends Character implements Wizard {
         name = Names.HUMAN_WIZARD_NAME;
         shootCaption = Names.GOOD_WIZARD_SHOOT;
         attackCaption = Names.GOOD_WIZARD_ATTACK;
-        attackDamage = Constants.HUMAN_WIZARD_DAMAGE; // атаковать магией (нанесение урона 4 HP)
+        attackDamage = Constants.HUMAN_WIZARD_DAMAGE;
     }
 
     @Override
     public void magic(Character character) throws GameException {
         validateCharacterIsMy(character);
         if (!character.isPrivilege()) {
-            character.setPrivilege(true); // наложение улучшения на персонажа своего отряда
+            character.setPrivilege(true);
         }
         setCaption(shootCaption);
     }

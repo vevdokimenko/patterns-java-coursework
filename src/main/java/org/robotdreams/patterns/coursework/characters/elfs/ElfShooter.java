@@ -16,8 +16,8 @@ public class ElfShooter extends Character implements Shooter {
         name = Names.ELF_SHOOTER_NAME;
         shootCaption = Names.GOOD_SHOOTER_SHOOT;
         attackCaption = Names.GOOD_SHOOTER_ATTACK;
-        shootDamage = Constants.ELF_SHOOT_DAMAGE; // стрелять из лука (нанесение урона 7 HP)
-        attackDamage = Constants.ELF_SHOOT_ATTACK; // атаковать противника (нанесение урона 3 HP)
+        shootDamage = Constants.ELF_SHOOT_DAMAGE;
+        attackDamage = Constants.ELF_SHOOT_ATTACK;
     }
 
     @Override

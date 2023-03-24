@@ -15,7 +15,7 @@ public class HumanWarrior extends Character implements Warrior {
     public HumanWarrior() {
         name = Names.HUMAN_WARRIOR_NAME;
         attackCaption = Names.GOOD_WARRIOR_ATTACK;
-        attackDamage = Constants.HUMAN_WARRIOR_DAMAGE; // атаковать мечом (нанесение урона 18 HP)
+        attackDamage = Constants.HUMAN_WARRIOR_DAMAGE;
     }
 
     @Override

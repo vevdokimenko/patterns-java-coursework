@@ -15,7 +15,7 @@ public class ElfWarrior extends Character implements Warrior {
     public ElfWarrior() {
         name = Names.ELF_WARRIOR_NAME;
         attackCaption = Names.GOOD_WARRIOR_ATTACK;
-        attackDamage = Constants.ELF_WARRIOR_DAMAGE; // атаковать мечом (нанесение урона 15 HP)
+        attackDamage = Constants.ELF_WARRIOR_DAMAGE;
     }
 
     @Override

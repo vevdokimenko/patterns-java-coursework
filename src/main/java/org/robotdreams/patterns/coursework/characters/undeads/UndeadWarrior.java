@@ -15,7 +15,7 @@ public class UndeadWarrior extends Character implements Warrior {
     public UndeadWarrior() {
         name = Names.UNDEAD_WARRIOR_NAME;
         attackCaption = Names.UNDEAD_WARRIOR_ATTACK;
-        attackDamage = Constants.UNDEAD_WARRIOR_DAMAGE; // удар копьем (нанесение урона 18 HP)
+        attackDamage = Constants.UNDEAD_WARRIOR_DAMAGE;
     }
 
     @Override

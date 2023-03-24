@@ -14,14 +14,14 @@ public class UndeadWizard extends Character implements Wizard {
         name = Names.UNDEAD_WIZARD_NAME;
         shootCaption = Names.UNDEAD_WIZARD_SHOOT;
         attackCaption = Names.UNDEAD_WIZARD_ATTACK;
-        attackDamage = Constants.UNDEAD_WIZARD_DAMAGE; // атака (нанесение урона 5 HP)
+        attackDamage = Constants.UNDEAD_WIZARD_DAMAGE;
     }
 
     @Override
     public void magic(Character character) throws GameException {
         validateCharacterIsEnemy(character);
         if (!character.isDamned())
-            character.setDamned(true); // наслать недуг (уменьшение силы урона персонажа противника на 50% на один ход)
+            character.setDamned(true);
         setCaption(shootCaption);
     }
 

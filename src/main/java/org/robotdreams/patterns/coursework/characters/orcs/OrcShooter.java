@@ -16,8 +16,8 @@ public class OrcShooter extends Character implements Shooter {
         name = Names.ORC_SHOOTER_NAME;
         shootCaption = Names.ORC_SHOOTER_SHOOT;
         attackCaption = Names.ORC_SHOOTER_ATTACK;
-        shootDamage = Constants.ORC_SHOOTER_SHOOT; // стрелять из лука (нанесение урона 3 HP)
-        attackDamage = Constants.ORC_SHOOTER_DAMAGE; // удар клинком (нанесение урона 2 HP)
+        shootDamage = Constants.ORC_SHOOTER_SHOOT;
+        attackDamage = Constants.ORC_SHOOTER_DAMAGE;
     }
 
     @Override
